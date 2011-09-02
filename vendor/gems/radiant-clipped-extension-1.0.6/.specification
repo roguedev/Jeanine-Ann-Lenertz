@@ -1,0 +1,242 @@
+--- !ruby/object:Gem::Specification 
+name: radiant-clipped-extension
+version: !ruby/object:Gem::Version 
+  prerelease: false
+  segments: 
+  - 1
+  - 0
+  - 6
+  version: 1.0.6
+platform: ruby
+authors: 
+- Keith Bingman
+- Benny Degezelle
+- William Ross
+- John W. Long
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2011-08-16 00:00:00 -05:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: acts_as_list
+  prerelease: false
+  requirement: &id001 !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ~>
+      - !ruby/object:Gem::Version 
+        segments: 
+        - 0
+        - 1
+        - 2
+        version: 0.1.2
+  type: :runtime
+  version_requirements: *id001
+- !ruby/object:Gem::Dependency 
+  name: paperclip
+  prerelease: false
+  requirement: &id002 !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ~>
+      - !ruby/object:Gem::Version 
+        segments: 
+        - 2
+        - 3
+        - 16
+        version: 2.3.16
+  type: :runtime
+  version_requirements: *id002
+- !ruby/object:Gem::Dependency 
+  name: uuidtools
+  prerelease: false
+  requirement: &id003 !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ~>
+      - !ruby/object:Gem::Version 
+        segments: 
+        - 2
+        - 1
+        - 2
+        version: 2.1.2
+  type: :runtime
+  version_requirements: *id003
+description: Asset-management derived from Keith Bingman's Paperclipped extension.
+email: 
+- radiant@radiantcms.org
+executables: []
+
+extensions: []
+
+extra_rdoc_files: []
+
+files: 
+- app/controllers/admin/assets_controller.rb
+- app/controllers/admin/page_attachments_controller.rb
+- app/helpers/admin/assets_helper.rb
+- app/models/asset.rb
+- app/models/asset_type.rb
+- app/models/old_page_attachment.rb
+- app/models/page_attachment.rb
+- app/views/admin/assets/_asset.html.haml
+- app/views/admin/assets/_asset_table.html.haml
+- app/views/admin/assets/_errors.html.haml
+- app/views/admin/assets/_form.html.haml
+- app/views/admin/assets/_page_assets.html.haml
+- app/views/admin/assets/_search.html.haml
+- app/views/admin/assets/_search_results.html.haml
+- app/views/admin/assets/edit.html.haml
+- app/views/admin/assets/index.html.haml
+- app/views/admin/assets/new.html.haml
+- app/views/admin/assets/refresh.html.haml
+- app/views/admin/assets/remove.html.haml
+- app/views/admin/configuration/_clipped_edit.html.haml
+- app/views/admin/configuration/_clipped_show.html.haml
+- app/views/admin/page_attachments/_attachment.html.haml
+- app/views/admin/page_parts/_page_part.html.haml
+- app/views/admin/pages/_asset_popups.html.haml
+- app/views/admin/pages/_assets.html.haml
+- app/views/admin/removed/_assets_bucket.html.haml
+- app/views/admin/removed/_assets_container.html.haml
+- app/views/admin/removed/_bucket.html.haml
+- app/views/admin/removed/_bucket_asset.html.haml
+- app/views/admin/removed/_show_bucket_link.html.haml
+- app/views/admin/removed/_upload_to_page.html.haml
+- app/views/admin/removed/bucket/_iframe.html.haml
+- artwork/icons.png
+- clipped_extension.rb
+- config/initializers/interpolation.rb
+- config/initializers/processors.rb
+- config/initializers/radiant_config.rb
+- config/locales/en.yml
+- config/locales/nl.yml
+- config/routes.rb
+- cucumber.yml
+- db/migrate/001_create_assets.rb
+- db/migrate/002_create_paperclip_attributes.rb
+- db/migrate/003_create_user_observer.rb
+- db/migrate/004_create_page_attachments.rb
+- db/migrate/005_rename_users.rb
+- db/migrate/20110513205050_asset_uuid.rb
+- db/migrate/20110606111250_update_configuration.rb
+- db/migrate/20110609101438_dimensions.rb
+- features/support/env.rb
+- features/support/paths.rb
+- lib/asset_tags.rb
+- lib/clipped_admin_ui.rb
+- lib/page_asset_associations.rb
+- lib/paperclip/frame_grab.rb
+- lib/paperclip/geometry_transformation.rb
+- lib/radiant-clipped-extension.rb
+- lib/tasks/clipped_extension_tasks.rake
+- lib/tasks/paperclip_tasks.rake
+- LICENSE
+- public/flash/ZeroClipboard.swf
+- public/images/admin/assets/add.png
+- public/images/admin/assets/archive_icon.png
+- public/images/admin/assets/audio_icon.png
+- public/images/admin/assets/audio_thumbnail.png
+- public/images/admin/assets/c_icon.png
+- public/images/admin/assets/copy.png
+- public/images/admin/assets/css_icon.png
+- public/images/admin/assets/database_icon.png
+- public/images/admin/assets/delete.png
+- public/images/admin/assets/document_icon.png
+- public/images/admin/assets/document_thumbnail.png
+- public/images/admin/assets/flash_icon.png
+- public/images/admin/assets/flash_thumbnail.png
+- public/images/admin/assets/font_icon.png
+- public/images/admin/assets/gzip_icon.png
+- public/images/admin/assets/html_icon.png
+- public/images/admin/assets/image_icon.png
+- public/images/admin/assets/image_thumbnail.png
+- public/images/admin/assets/java_icon.png
+- public/images/admin/assets/page_edit.png
+- public/images/admin/assets/perl_icon.png
+- public/images/admin/assets/php_icon.png
+- public/images/admin/assets/presentation_icon.png
+- public/images/admin/assets/python_icon.png
+- public/images/admin/assets/reorder_assets.png
+- public/images/admin/assets/ruby_icon.png
+- public/images/admin/assets/script_icon.png
+- public/images/admin/assets/spreadsheet_icon.png
+- public/images/admin/assets/tar_icon.png
+- public/images/admin/assets/unknown_icon.png
+- public/images/admin/assets/unknown_thumbnail.png
+- public/images/admin/assets/video_icon.png
+- public/images/admin/assets/video_thumbnail.png
+- public/images/admin/assets/xml_icon.png
+- public/images/admin/assets/zip_icon.png
+- public/javascripts/admin/assets.js
+- public/stylesheets/sass/admin/assets.sass
+- radiant-clipped-extension.gemspec
+- Rakefile
+- README.md
+- spec/controllers/admin/assets_controller_spec.rb
+- spec/controllers/admin/page_attachments_controller_spec.rb
+- spec/datasets/assets_dataset.rb
+- spec/fixtures/5k.png
+- spec/fixtures/test.flv
+- spec/lib/asset_tags_spec.rb
+- spec/lib/frame_grab_spec.rb
+- spec/lib/geometry_transformation_spec.rb
+- spec/models/asset_spec.rb
+- spec/models/asset_type_spec.rb
+- spec/models/post_processing_spec.rb
+- spec/spec.opts
+- spec/spec_helper.rb
+- wireframes/edit-page-assets-2.bmml
+- wireframes/edit-page-assets-2.png
+- wireframes/edit-page-assets-3.bmml
+- wireframes/edit-page-assets-3.png
+- wireframes/edit-page-assets.bmml
+- wireframes/edit-page-assets.png
+- wireframes/edit-page.bmml
+- wireframes/edit-page.png
+has_rdoc: true
+homepage: http://radiantcms.org
+licenses: []
+
+post_install_message: "\n  Add this to your radiant project with:\n    config.gem 'radiant-clipped-extension', :version => '~>1.0.6'\n  "
+rdoc_options: []
+
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      segments: 
+      - 0
+      version: "0"
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.3.6
+signing_key: 
+specification_version: 3
+summary: Assets for Radiant CMS
+test_files: 
+- spec/controllers/admin/assets_controller_spec.rb
+- spec/controllers/admin/page_attachments_controller_spec.rb
+- spec/datasets/assets_dataset.rb
+- spec/fixtures/5k.png
+- spec/fixtures/test.flv
+- spec/lib/asset_tags_spec.rb
+- spec/lib/frame_grab_spec.rb
+- spec/lib/geometry_transformation_spec.rb
+- spec/models/asset_spec.rb
+- spec/models/asset_type_spec.rb
+- spec/models/post_processing_spec.rb
+- spec/spec.opts
+- spec/spec_helper.rb
+- features/support/env.rb
+- features/support/paths.rb

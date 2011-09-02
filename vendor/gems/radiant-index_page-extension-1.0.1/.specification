@@ -1,0 +1,86 @@
+--- !ruby/object:Gem::Specification 
+name: radiant-index_page-extension
+version: !ruby/object:Gem::Version 
+  prerelease: false
+  segments: 
+  - 1
+  - 0
+  - 1
+  version: 1.0.1
+platform: ruby
+authors: 
+- Benny Degezelle
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2011-02-14 00:00:00 -06:00
+default_executable: 
+dependencies: []
+
+description: Makes Radiant better by adding index_page!
+email: 
+- benny@gorilla-webdesign.be
+executables: []
+
+extensions: []
+
+extra_rdoc_files: []
+
+files: 
+- LICENSE
+- README.markdown
+- Rakefile
+- app/models/index_archive_page.rb
+- app/models/index_page.rb
+- cucumber.yml
+- features/support/env.rb
+- features/support/paths.rb
+- index_page_extension.rb
+- lib/index_page_methods.rb
+- lib/radiant-index_page-extension.rb
+- lib/radiant-index_page-extension/version.rb
+- lib/tasks/index_page_extension_tasks.rake
+- radiant-index_page-extension.gemspec
+- spec/spec.opts
+- spec/spec_helper.rb
+- test/functional/index_page_extension_test.rb
+- test/test_helper.rb
+has_rdoc: true
+homepage: http://github.com/jomz/radiant-index-page-extension
+licenses: []
+
+post_install_message: "\n  Add this to your radiant project with:\n    config.gem 'radiant-index_page-extension', :version => '1.0.1'\n  "
+rdoc_options: []
+
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      segments: 
+      - 0
+      version: "0"
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.3.6
+signing_key: 
+specification_version: 3
+summary: Index Page for Radiant CMS
+test_files: 
+- features/support/env.rb
+- features/support/paths.rb
+- spec/spec.opts
+- spec/spec_helper.rb
+- test/functional/index_page_extension_test.rb
+- test/test_helper.rb
+
