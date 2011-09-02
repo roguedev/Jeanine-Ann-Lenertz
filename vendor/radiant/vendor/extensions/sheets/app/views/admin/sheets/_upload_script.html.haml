@@ -1,0 +1,16 @@
+- content_for :page_scripts do 
+  :plain
+    document.observe('dom:loaded', function(){ 
+      $('uploader').down('form.button_form input[type=submit]').hide()
+      $('uploader').hide()
+    })
+    Event.addBehavior({
+      'a.replace:click': function(){
+        var ref = this.readAttribute('href').sub(/\#/,'')
+        $(ref).show();
+        this.hide();
+      },
+      'input[type=file]:change': function(){
+        this.up('form').highlight().down('input[type=submit]').show();
+      }
+    });

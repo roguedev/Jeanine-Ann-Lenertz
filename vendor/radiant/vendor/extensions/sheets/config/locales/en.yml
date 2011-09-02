@@ -1,0 +1,17 @@
+---
+en: 
+  create_javascript: Create Javascript
+  create_stylesheet: Create Stylesheet
+  edit_javascript: Edit Javascript
+  edit_stylesheet: Edit Stylesheet
+  new_javascript: New Javascript
+  new_stylesheet: New Stylesheet
+  path: Path
+  sheets: Sheets
+  upload: Upload
+  stylesheet_page: Stylesheet
+  javascript_page: Javascript
+  sheets:
+    root_required: "You must first publish a homepage before you may create a %{model}."
+  no_styles: 'No Stylesheets'
+  no_scripts: 'No Javascripts'
